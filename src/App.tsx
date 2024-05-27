@@ -1,12 +1,11 @@
 import * as elements from 'typed-html';
-import Counter from './components/Counter';
-
+import EntitiesList from './components/EntitiesList';
 const App = () => {
   return (
-    <div>
-      {Counter()}
+    <div id="sorting-wrapper">
+      <div id="entities-wrapper">{EntitiesList()}</div>
     </div>
   );
-}
+};
 
 export default App;

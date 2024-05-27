@@ -4,10 +4,12 @@ module.exports = {
   entry: './src/index.ts',
   output: {
     filename: './bundle.js',
-    path: path.resolve(__dirname, 'public')
+    path: path.resolve(__dirname, 'public'),
   },
   devServer: {
-    contentBase: './public',
+    static: {
+      directory: path.join(__dirname, 'public'),
+    },
   },
   module: {
     rules: [
@@ -18,7 +20,8 @@ module.exports = {
       },
     ],
   },
+  mode: 'development',
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ],
+    extensions: ['.tsx', '.ts', '.js'],
   },
-}
+};
